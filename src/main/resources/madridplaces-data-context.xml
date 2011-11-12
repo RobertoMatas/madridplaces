@@ -12,16 +12,12 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
 	<context:property-placeholder location="classpath:madridplaces-config.properties" />
-	
-	<bean class="java.net.URI" id="dbUrl">
-		<constructor-arg value="${DATABASE_URL}"/>
-	</bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="${jdbc.database.driverClassName}"/>
-		<property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>
-		<property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
-		<property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+		<property name="driverClassName" value="${jdbc.database.driverClassName}" />
+		<property name="url" value="${jdbc.database.url}/${jdbc.database.dbname}" />
+		<property name="username" value="${jdbc.database.user}" />
+		<property name="password" value="${jdbc.database.pass}" />
 	</bean>
 
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

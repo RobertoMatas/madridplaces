@@ -9,6 +9,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div>
+	<c:url value="/j_spring_security_logout" var="logout" scope="page" />
+	<c:url value="/admin" var="admin" scope="page" />
+	<ul>
+		<li>
+			<a href="${logout }" data-role="button" data-icon="arrow-r">Logout</a>
+		</li>
+		<li>
+			<a href="${admin }" data-role="button" data-icon="arrow-r">Volver</a>
+		</li>
+	</ul>
+</div>
+<div>
 <form:errors path="*" />
 <c:set var="submitUrl"><c:url value="/calificacion/edit" /></c:set>
 <form:form modelAttribute="calificacion" action="${submitUrl }" method="post">
@@ -30,5 +43,6 @@
 		<input type="submit" value="Editar" />
 	</fieldset>
 </form:form>
+</div>
 </body>
 </html>

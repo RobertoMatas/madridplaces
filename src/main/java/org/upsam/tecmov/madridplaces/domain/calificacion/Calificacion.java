@@ -2,6 +2,7 @@ package org.upsam.tecmov.madridplaces.domain.calificacion;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import org.upsam.tecmov.madridplaces.domain.codpostal.CodPostal;
@@ -16,7 +17,7 @@ public class Calificacion {
 	/**
 	 * Nivel de peligrosidad de la zona
 	 */
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
 	private NivelPeligrosidad peligrosidad;
 	/**
 	 * Zona a la que se refiere

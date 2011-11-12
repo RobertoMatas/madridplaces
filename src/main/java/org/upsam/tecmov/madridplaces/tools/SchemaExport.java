@@ -20,15 +20,14 @@ public class SchemaExport {
 		config.addAnnotatedClass(Parada.class);
 		config.addAnnotatedClass(NivelPeligrosidad.class);
 		config.addAnnotatedClass(Calificacion.class);
-		config.setProperty("hibernate.dialect", "org.hibernate.dialect.SQLServer2008Dialect");
-		//config.setProperty("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
-		config.setProperty("hibernate.connection.driver_class", "net.sourceforge.jtds.jdbc.Driver");
-		config.setProperty("hibernate.connection.url", "jdbc:sqlserver://localhost;databaseName=MadridPlaces;");
-		config.setProperty("hibernate.connection.username", "tecmov");
-		config.setProperty("hibernate.connection.password", "tecmov");
+		config.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+		config.setProperty("hibernate.connection.driver_class", "org.postgresql.Driver");
+		config.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/madridplaces");
+		config.setProperty("hibernate.connection.username", "postgres");
+		config.setProperty("hibernate.connection.password", "postgres");
 		org.hibernate.tool.hbm2ddl.SchemaExport schemaExport = new org.hibernate.tool.hbm2ddl.SchemaExport(config);
 		schemaExport.setOutputFile(FILENAME);
-		schemaExport.create(true, false);
+		schemaExport.create(true, true);
 		System.out.println("Fichero creado en: " + FILENAME);
 	}
 }

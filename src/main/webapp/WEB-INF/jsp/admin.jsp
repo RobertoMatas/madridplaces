@@ -9,6 +9,23 @@
 <title>Administración</title>
 </head>
 <body>
-<c:out value="${calificaciones }" />
+<div>
+	<c:url value="/j_spring_security_logout" var="logout" scope="page" />
+	<a href="${logout }" data-role="button" data-icon="arrow-r">Logout</a>
+</div>
+<div>
+<ul>
+	<c:forEach items="${calificaciones }" var="c">
+		<li>
+			<c:url value="/calificacion/edit" var="editUrl">
+				<c:param name="id" value="${c.id }"/>
+			</c:url>
+			<a href="${editUrl }">Editar opinión sobre <c:out value="${c.codPostal }" /> </a>
+		</li>
+	
+	</c:forEach>
+
+</ul>
+</div>
 </body>
 </html>
