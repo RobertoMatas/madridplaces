@@ -1,0 +1,142 @@
+﻿/* CSS Document */
+
+/* General */
+
+body
+	{
+	color:#333333;
+	background-color:#FF6600;
+	font-size:12px;
+	font-family: Arial,Helvetica, sans-serif;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	text-align:justify;	
+	}
+	
+
+/* fin General */
+
+/* Capas */
+
+#div_centrado
+	{
+	margin:auto;
+	width: 1024px;	
+	background-color:#FFFFFF;
+	}
+
+#div_contenido
+    {
+        width:700px;
+        padding-top:20px;
+        margin:auto;
+        background-image:url(../images/MadridPlacesFondo.png);
+        background-repeat: no-repeat;
+        background-position:center;       
+        min-height:400px;
+    }
+
+#div_login
+    {
+        margin-top:150px;
+        margin-left:220px;
+        width:520px;
+        height:300px;
+        padding:30px;
+        position: absolute;
+        border:#333333 2px solid;  
+        background-color:#BBBBBB;          
+    }		
+
+#div_sesion
+    {
+        background-color:#333333; 
+        padding-right:5px;
+        text-align:right;
+        font-size:12px;
+	    font-family: Arial,Helvetica, sans-serif;
+	}
+
+#div_volver
+    {
+        float:left;
+        background-color:#333333; 
+        padding-left:5px;
+        font-size:12px;
+	    font-family: Arial,Helvetica, sans-serif;	    
+	}
+
+#div_pie
+    {
+        background-color:#333333; 
+        text-align:center;
+        color:#FFFFFF;
+        font-size:14px;
+	    font-family: Arial,Helvetica, sans-serif;
+	}
+
+/* fin Capas */
+
+/* Formularios */
+
+.boton
+{
+	color:#333333;
+	font-weight:bold;
+	border:#333333 solid 2px;
+	height:30px;
+	min-width:80px;
+	padding:0px 8px; 
+	background:#FF6600;
+    text-align: center;
+	cursor:pointer; 
+}
+
+.formulario
+{
+	font-size:12px;
+	color:#FFFFFF;
+	background:#FF6600;
+	border:#333333 1px solid;
+}
+
+.leyenda
+{
+    color:#FF6600;
+    font-size:16px;       
+}
+
+A.links
+    {
+        color:#FF6600;
+	    font-size:12px;
+	    font-weight:bold;
+	    text-decoration:none;
+    }
+    
+A.links:hover
+    {
+        color:#333333;
+        font-size:12px;
+        font-weight:bold;
+	    text-decoration:none;	    
+    }
+
+A.linkBoton
+    {
+        color:#FFFFFF;
+	    font-size:12px;
+	    font-weight:bold;
+	    text-decoration:none;
+    }
+    
+A.linkBoton:hover
+    {
+        color:#FF6600;
+        font-size:12px;
+        font-weight:bold;
+	    text-decoration:none;	    
+    }
+
+
+/* fin Formularios*/

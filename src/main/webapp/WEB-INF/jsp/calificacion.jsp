@@ -28,19 +28,19 @@
          <h1>Peligrosidad <c:out value="${calificacion.min } - ${calificacion.max }" /> %</h1>
            <c:choose>
            		<c:when test="${calificacion.nivel eq 'MUY_SEGURO' }">
-           		<p><img src="<c:url value="/resources/img/carita_verde.png" />" alt="Peligrosidad" /></p>
+           		<p><img src="<c:url value="/resources/images/carita_verde.png" />" alt="Peligrosidad" /></p>
            		</c:when>
            		<c:when test="${calificacion.nivel eq 'SEGURO' }">
-           		<p><img src="<c:url value="/resources/img/carita_verde_amarilla.png" />" alt="Peligrosidad" /></p>
+           		<p><img src="<c:url value="/resources/images/carita_verde_amarilla.png" />" alt="Peligrosidad" /></p>
            		</c:when>
            		<c:when test="${calificacion.nivel eq 'MEDIO' }">
-           		<p><img src="<c:url value="/resources/img/carita_amarilla.png" />" alt="Peligrosidad" /></p>
+           		<p><img src="<c:url value="/resources/images/carita_amarilla.png" />" alt="Peligrosidad" /></p>
            		</c:when>
            		<c:when test="${calificacion.nivel eq 'PELIGROSO' }">
-           		<p><img src="<c:url value="/resources/img/carita_naranja.png" />" alt="Peligrosidad" /></p>
+           		<p><img src="<c:url value="/resources/images/carita_naranja.png" />" alt="Peligrosidad" /></p>
            		</c:when>
            		<c:when test="${calificacion.nivel eq 'MUY_PELIGROSO' }">
-           			<p><img src="<c:url value="/resources/img/carita_roja.png" />" alt="Peligrosidad" /></p>
+           			<p><img src="<c:url value="/resources/images/carita_roja.png" />" alt="Peligrosidad" /></p>
            		</c:when>
            		<c:otherwise> <p></p></c:otherwise>
            </c:choose>

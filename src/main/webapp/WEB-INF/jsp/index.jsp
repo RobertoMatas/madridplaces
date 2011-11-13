@@ -35,7 +35,7 @@
 						<div class="ui-btn-text">
 						<c:url value="/codPostal" var="codPostalUrl" />
 							<a href="${codPostalUrl }" class="ui-link-inherit">
-							 <img src="<c:url value="/resources/img/correos.jpg" />" alt="Codigo Postal" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
+							 <img src="<c:url value="/resources/images/correos.jpg" />" alt="Codigo Postal" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
 							 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Código Postal</a>
 						</div>
 						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
@@ -48,7 +48,7 @@
 						<div class="ui-btn-text">
                   	  	<c:url value="/lineas" var="lineasUrl" />
 							<a href="${lineasUrl }" class="ui-link-inherit" data-ajax="false"><img
-								src="<c:url value="/resources/img/metro.png" />" alt="Metro" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
+								src="<c:url value="/resources/images/metro.png" />" alt="Metro" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metro</a>
 						</div>
 						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
