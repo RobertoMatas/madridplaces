@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +20,7 @@
       <div data-role="header">
           <a rel="external" data-icon="info" href="#info">Info</a>
           <h1>Inicio</h1>
-          <a rel="external" href="#grupoX">Grupo X</a>
+          <a rel="external" href="#grupoX">Grupo 10</a>
       </div>
       <!--/Header-->
       <div data-role="content">
@@ -56,11 +57,7 @@
 				</li>
 			</ul>
       </div>
-      <!-- Footer -->
-      <div data-role="footer" data-theme="a">
-          <h4>&copy; Grupo X</h4>
-      </div>
-      <!-- /Footer -->
+     <jsp:include page="footer.jsp" />
   </div>
 
   <!-- Info -->
@@ -73,35 +70,35 @@
       <!--/Header-->
 
       <div data-role="content" data-theme="a">
-          <p>Aqui va un textaco sobre que va la aplicacion</p>
+          <p>Danos el código postal de la zona dónde te encuentras y te diremos qué tal es la zona</p>
+          <sec:authorize access="hasRole('ROLE_ADMIN')">
+	          <c:url value="/admin" var="adminUrl" />
+	          <a href="${adminUrl }" data-icon="arrow-r" data-theme="a" data-ajax="false">Administrar</a>
+          </sec:authorize>
       </div>
 
-      <!-- Footer -->
-      <div data-role="footer" data-theme="a">
-          <h4>&copy; Grupo X</h4>
-      </div>
-      <!-- /Footer -->
+      <jsp:include page="footer.jsp" />
   </div>
   <!-- /Info -->
 
   <!-- Grupo X -->
-  <div data-role="page" id="grupoX" data-title="Grupo X">
+  <div data-role="page" id="grupoX" data-title="Grupo 10">
       <!--Header-->
       <div data-role="header" data-position="inline" data-theme="a">
           <a href="#inicio" data-icon="arrow-l" data-theme="a">Volver</a>
-          <h1>Grupo X</h1>
+          <h1>Grupo 10</h1>
       </div>
       <!--/Header-->
 
       <div data-role="content" data-theme="a">
-          <p>Aqui van los nombres y los expedientes del grupo</p>
+          <p>Roberto Matas Pascual <strong>64414</strong></p>
+          <p>Javier Urosa Domingo</p>
+          <p>Alicia Mª Guerra Lafuente</p>
+          <p>Víctor Moreno Sanz <strong>64242</strong></p>
+          <p>Alejandro Gil-Dávila</p>
       </div>
 
-      <!-- Footer -->
-      <div data-role="footer" data-theme="a">
-          <h4>&copy; Grupo X</h4>
-      </div>
-      <!-- /Footer -->
+      <jsp:include page="footer.jsp" />
   </div>
   <!-- /Grupo X -->
 </body>

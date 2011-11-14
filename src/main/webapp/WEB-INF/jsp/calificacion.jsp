@@ -48,11 +48,7 @@
            <p><c:out value="${calificacion.comentario }" /></p>
        </div>
 
-       <!-- Footer -->
-       <div data-role="footer" data-theme="a">
-           <h4>&copy; Grupo X</h4>
-       </div>
-       <!-- /Footer -->
+       <jsp:include page="footer.jsp" />
    </div>
    <!-- /Resultados -->
 </body>

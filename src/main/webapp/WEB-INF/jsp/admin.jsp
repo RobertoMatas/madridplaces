@@ -30,7 +30,7 @@
 
 </ul>
 </div>
-<div id="div_pie">&copy; Grupo X</div>
+<div id="div_pie">&copy; Grupo 10</div>
 </div>
 </body>
 </html>
