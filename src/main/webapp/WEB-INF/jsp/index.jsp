@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<c:url value="/resources/js/phonegap-1.1.0.js" />"></script>
     </head>
 <body>
   <!-- INICIO -->
