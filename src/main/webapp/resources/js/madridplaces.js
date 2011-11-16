@@ -1,4 +1,4 @@
-var appBaseUrl = "http://localhost:8080/madridplaces";
+var appBaseUrl = "http://madridplaces.herokuapp.com";
 
 function updateCalificacion(data) {
 	if (data.comentario != null) {
