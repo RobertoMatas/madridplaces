@@ -25,7 +25,7 @@ public class CalificacionServiceFacadeImpl implements CalificacionServiceFacade 
 	 */
 	private CalificacionRepository calificacionRepository;
 	/**
-	 * Repositorio de códigos postales
+	 * Repositorio de cï¿½digos postales
 	 */
 	private CodPostalRepository codPostalRepository;
 	/**
@@ -102,7 +102,7 @@ public class CalificacionServiceFacadeImpl implements CalificacionServiceFacade 
 
 	private CalificacionView toView(Calificacion calificacion) {
 		if (calificacion == null) {
-			return new CalificacionView("En estos momentos no existe calificación para el CP introducido");
+			return new CalificacionView("En estos momentos no existe calificaciï¿½n para el CP introducido");
 		}
 		NivelPeligrosidad peligrosidad = calificacion.getPeligrosidad();
 		return new CalificacionView(

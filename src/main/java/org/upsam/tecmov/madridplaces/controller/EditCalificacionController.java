@@ -53,7 +53,7 @@ public class EditCalificacionController {
 	}
 
 	/**
-	 * Procesa el submit del formulario de edición de calificación para un código postal
+	 * Procesa el submit del formulario de ediciï¿½n de calificaciï¿½n para un cï¿½digo postal
 	 * @param newUser
 	 * @param result
 	 * @param status

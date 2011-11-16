@@ -1,19 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
     <head>
         <title>The Man of the Vara Mobile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="<c:url value="/resources/js/madridplaces.js" />"></script>
-        <script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="<c:url value="/resources/js/phonegap-1.1.0.js" />"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="/madridplaces/resources/js/madridplaces.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0rc3/jquery.mobile-1.0rc3.min.js"></script>
     </head>
 <body>
   <!-- INICIO -->
@@ -37,7 +31,7 @@
 						class="ui-btn-inner ui-li">
 						<div class="ui-btn-text">
 							<a href="#CodPostal" class="ui-link-inherit">
-							 <img src="<c:url value="/resources/images/correos.jpg" />" alt="Codigo Postal" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
+							 <img src="images/correos.jpg" alt="Codigo Postal" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
 							 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Código Postal</a>
 						</div>
 						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
@@ -49,7 +43,7 @@
 						class="ui-btn-inner ui-li">
 						<div class="ui-btn-text">
 							<a href="#Metro" class="ui-link-inherit" id="gotolineas"><img
-								src="<c:url value="/resources/images/metro.png" />" alt="Metro" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
+								src="images/metro.png" alt="Metro" class="ui-li-icon ui-li-thumb" height="16" width="16px" >
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metro</a>
 						</div>
 						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
@@ -99,7 +93,7 @@
           <p>Javier Urosa Domingo</p>
           <p>Alicia Mª Guerra Lafuente</p>
           <p>Víctor Moreno Sanz <strong>64242</strong></p>
-          <p>Alejandro Gil-Dávila</p>
+          <p>Alejandro Gil-Dávila <strong>64309</strong></p>
       </div>
 
       <!-- Footer -->

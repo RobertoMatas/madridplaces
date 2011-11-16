@@ -22,8 +22,17 @@
 	
 	<mvc:view-controller path="/login" view-name="login"/>
 	
-	<mvc:view-controller path="/codPostal" view-name="codPostal"/>
-	
 	<mvc:view-controller path="/" view-name="index"/>
+	
+	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
+	
+	<!-- Required for REST services in order to bind the return value to the ResponseBody. -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	    <property name="messageConverters">
+	        <list>
+				<ref bean="jacksonMessageConverter" />
+	        </list>
+	    </property>
+	</bean>
 	 
 </beans>

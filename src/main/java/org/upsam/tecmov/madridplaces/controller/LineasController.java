@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.upsam.tecmov.madridplaces.facade.LineaServiceFacade;
+import org.upsam.tecmov.madridplaces.view.LineaView;
 
 @Controller
 public class LineasController {
@@ -22,8 +24,8 @@ public class LineasController {
 	}
 
 	@RequestMapping(value = "/lineas", method = RequestMethod.GET)
-	public String showLineas(Model model) {
-		model.addAttribute("lineas", facade.findAll());
-		return "lineas";
+	@ResponseBody
+	public LineaView showLineas(Model model) {
+		return facade.findAll();
 	}
 }

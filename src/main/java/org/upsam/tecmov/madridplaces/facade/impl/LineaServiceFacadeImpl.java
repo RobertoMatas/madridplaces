@@ -1,7 +1,6 @@
 package org.upsam.tecmov.madridplaces.facade.impl;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +10,7 @@ import org.upsam.tecmov.madridplaces.domain.linea.LineaRepository;
 import org.upsam.tecmov.madridplaces.domain.linea.Parada;
 import org.upsam.tecmov.madridplaces.facade.LineaServiceFacade;
 import org.upsam.tecmov.madridplaces.view.LineaView;
+import org.upsam.tecmov.madridplaces.view.LineaViewItem;
 import org.upsam.tecmov.madridplaces.view.ParadaView;
 
 @Service
@@ -28,26 +28,26 @@ public class LineaServiceFacadeImpl implements LineaServiceFacade {
 		this.lineaRepository = lineaRepository;
 	}
 
-	public List<LineaView> findAll() {
+	public LineaView findAll() {
 		return toView(lineaRepository.findAll());
 	}
-
-	private List<LineaView> toView(Iterable<Linea> lineas) {
-		List<LineaView> view = null;
+	
+	private LineaView toView(Iterable<Linea> lineas) {
+		ArrayList<LineaViewItem> items = null;
 		if (lineas != null) {
-			view = new ArrayList<LineaView>();
-			LineaView lineaView = null;
+			items = new ArrayList<LineaViewItem>();
+			LineaViewItem lineaView = null;
 			ParadaView paradaView = null;
 			for (Linea linea : lineas) {
-				lineaView = new LineaView(linea.getNumero(), linea.getColor());
+				lineaView = new LineaViewItem(linea.getNumero(), linea.getColor());
 				for (Parada parada : linea.getParadas()) {
 					paradaView = new ParadaView(parada.getNombre(), parada.getCodPostal().getCodPostal());
 					lineaView.addParadaView(paradaView);
 				}
-				view.add(lineaView);
+				items.add(lineaView);
 			}
 		}
-		return view;
+		return new LineaView(items);
 	}
 
 }

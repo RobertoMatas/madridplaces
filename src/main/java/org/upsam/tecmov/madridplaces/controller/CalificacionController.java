@@ -9,8 +9,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.upsam.tecmov.madridplaces.controller.form.CodPostalForm;
 import org.upsam.tecmov.madridplaces.facade.CalificacionServiceFacade;
+import org.upsam.tecmov.madridplaces.view.CalificacionView;
 
 @Controller
 public class CalificacionController {
@@ -27,11 +29,9 @@ public class CalificacionController {
 	}
 
 	@RequestMapping(value = "/calificacion", method = {RequestMethod.GET, RequestMethod.POST})
-	public String getCalificacion(@ModelAttribute @Valid CodPostalForm cp, BindingResult result, Model model) {
-		if (! result.hasErrors()) {
-			model.addAttribute("calificacion", facade.findByCodPostal(cp.getCodPostal()));
-		} 
-		return "calificacion";
+	@ResponseBody
+	public CalificacionView getCalificacion(@ModelAttribute @Valid CodPostalForm cp, BindingResult result, Model model) {
+		return facade.findByCodPostal(cp.getCodPostal());
 	}
 	
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)

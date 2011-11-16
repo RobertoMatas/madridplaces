@@ -11,7 +11,7 @@ public class CalificacionView implements Serializable {
 	 */
 	private static final long serialVersionUID = 1384529649913841169L;
 	/**
-	 * Identificador de calificación
+	 * Identificador de calificaciï¿½n
 	 */
 	private Integer id;
 	/**
@@ -23,15 +23,15 @@ public class CalificacionView implements Serializable {
 	 */
 	private Integer idNivel;
 	/**
-	 * Valor mínimo del rango de peligrosidad
+	 * Valor mï¿½nimo del rango de peligrosidad
 	 */
 	private Integer min;
 	/**
-	 * Valor máximo del rango de peligrosidad
+	 * Valor mï¿½ximo del rango de peligrosidad
 	 */
 	private Integer max;
 	/**
-	 * Código postal al que se refiere la calificación
+	 * Cï¿½digo postal al que se refiere la calificaciï¿½n
 	 */
 	private String codPostal;
 	/**

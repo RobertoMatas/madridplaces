@@ -80,13 +80,18 @@
 			<version>9.0-801.jdbc4</version>
 		</dependency>
 
- <!-- 
-		 <dependency>
-		    <groupId>net.sourceforge.jtds</groupId>
-		    <artifactId>jtds</artifactId>
-		    <version>1.2.4</version>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.6.4</version>
 		</dependency>
-  -->
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-xc</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -130,7 +135,6 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.2.0.Final</version>
 		</dependency>
-
 	</dependencies>
   <build>
     <finalName>madridplaces</finalName>

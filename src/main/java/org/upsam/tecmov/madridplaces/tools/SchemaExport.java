@@ -27,7 +27,7 @@ public class SchemaExport {
 		config.setProperty("hibernate.connection.password", "postgres");
 		org.hibernate.tool.hbm2ddl.SchemaExport schemaExport = new org.hibernate.tool.hbm2ddl.SchemaExport(config);
 		schemaExport.setOutputFile(FILENAME);
-		schemaExport.create(true, true);
+		schemaExport.create(true, false);
 		System.out.println("Fichero creado en: " + FILENAME);
 	}
 }
