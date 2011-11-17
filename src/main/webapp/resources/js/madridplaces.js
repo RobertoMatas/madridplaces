@@ -62,8 +62,8 @@ $( function() {
 					// para cada parada
 					for ( var j = 0; j < paradas.length; j++) {
 						var parada = paradas[j];
-						var $li = $('<li><a href="#resultados" data-ajax="false" data-url="' + '?num1=' + parada.codPostal[3] + '&num2=' + parada.codPostal[4]  + 
-								'" style="color:' + linea.color + '">' + parada.nombre + '</a></li>');
+						var $li = $('<li><a href="#resultados" data-ajax="false" data-url="' + '?num1=' + parada.codPostal[3] + '&num2='
+									+ parada.codPostal[4]  + '">' + parada.nombre + '</a></li>');
 						$ullinea.append($li);
 					}						
 					
