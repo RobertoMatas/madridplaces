@@ -11,9 +11,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="<c:url value="/resources/js/madridplaces.js" />"></script>
+        <script type="text/javascript" charset="ISO-8859-1" src="<c:url value="/resources/js/madridplaces.js" />"></script>
         <script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="<c:url value="/resources/js/phonegap-1.1.0.js" />"></script>
+        <script type="text/javascript" charset="ISO-8859-1" src="<c:url value="/resources/js/phonegap-1.1.0.js" />"></script>
     </head>
 <body>
   <!-- INICIO -->
@@ -96,10 +96,10 @@
 
       <div data-role="content" data-theme="a">
           <p>Roberto Matas Pascual <strong>64414</strong></p>
-          <p>Javier Urosa Domingo</p>
-          <p>Alicia Mª Guerra Lafuente</p>
+          <p>Javier Urosa Domingo <strong>64216</strong></p>
+          <p>Alicia Mª Guerra Lafuente <strong>64175</strong></p>
           <p>Víctor Moreno Sanz <strong>64242</strong></p>
-          <p>Alejandro Gil-Dávila</p>
+          <p>Alejandro Gil-Dávila <strong>64309</strong></p>
       </div>
 
       <!-- Footer -->
@@ -172,7 +172,7 @@
        <!--/Header-->
 
        <div data-role="content" data-theme="a">
-			<h1>Peligrosidad <span id="pctjePeligrosidad"></span></h1>
+			<h1>Peligrosidad</h1><h1><span id="pctjePeligrosidad"></span></h1>
 			<p><img id="imgPeligrosidad" src="" alt="Peligrosidad" /></p>
 			<p id="comentario"></p>
        </div>
